@@ -1,0 +1,8 @@
+com\example\weatherapi\model\package-info.class
+com\example\weatherapi\service\HelperAPI.class
+com\example\weatherapi\service\WeatherAPI.class
+com\example\weatherapi\model\WeatherData$WeatherDetails.class
+com\example\weatherapi\model\WeatherData.class
+com\example\weatherapi\util\package-info.class
+com\example\weatherapi\service\package-info.class
+com\example\weatherapi\util\HttpClient.class

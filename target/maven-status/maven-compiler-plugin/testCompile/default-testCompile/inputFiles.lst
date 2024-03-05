@@ -1,0 +1,17 @@
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\com\example\weatherapp\tests\package-info.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\runners\TestRunner.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\pageObjects\WeatherPage.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\seleniumTests\SearchCityTests.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\utils\WebDriverManager.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\stepDefinitions\WeatherStepDefinitions.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\com\example\steps\WeatherAPISteps.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\pageObjects\package-info.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\seleniumTests\package-info.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\com\example\helpers\WeatherAPIClient.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\utils\package-info.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\stepDefinitions\OpenWeatherMapStepDefinitions.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\pageObjects\MainPage.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\utils\ReportGenerator.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\pageObjects\OpenWeatherMapPage.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\stepDefinitions\package-info.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\test\java\com\example\weatherapp\tests\OpenWeatherMapTests.java
