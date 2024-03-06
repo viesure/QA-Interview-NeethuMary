@@ -1,7 +1,9 @@
 C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\service\package-info.java
 C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\util\HttpClient.java
 C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\util\package-info.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\selenium\package-info.java
 C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\model\package-info.java
 C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\service\WeatherAPI.java
 C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\model\WeatherData.java
 C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\service\HelperAPI.java
+C:\Users\Admin\eclipse-workspace\weather-app\src\main\java\com\example\weatherapi\selenium\OpenWeatherMapPage.java

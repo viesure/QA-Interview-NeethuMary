@@ -1,6 +1,5 @@
 package com.example.weatherapi.model;
 
-// Import statements if needed
 
 // WeatherData class representing the weather data returned by the API
 
@@ -13,7 +12,7 @@ public class WeatherData {
     private int conditionId;
     private String description;
     private WeatherDetails weather;
-
+    //private int tempInFahrenheit;
     // Getters and setters
 
     public String getCity() {
@@ -86,4 +85,14 @@ public class WeatherData {
             this.tempInCelsius = tempInCelsius;
         }
     }
+
+	public Object getTempInFahrenheit() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getTempInCelsius() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
