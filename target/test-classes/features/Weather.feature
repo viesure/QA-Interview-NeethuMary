@@ -1,25 +1,34 @@
 Feature: Weather API Testing
 
-  Background:
-    Given the base URL is "https://backend-interview.tools.gcp.viesure.io/"
-    
-  Scenario: Verify weather details for a fixed city
-    When I fetch the weather details
-    Then the city should be "Vienna"
-    And the condition should be "clear"
-    And the icon should be "clear.PNG"
-    And the condition ID should be 1
-    And the description should be "The weather is mild"
-    And the temperature in Fahrenheit should be 60
-    And the temperature in Celsius should be 15
+  Scenario: Fetch and verify weather data
+    Given I fetch weather data
+    Then I verify the weather condition
+    And I verify temperature conversion from Fahrenheit to Celsius
+    And I verify weather description based on temperature in Celsius
 
-  Scenario: Update temperature and verify description
-    Given the temperature is set to 32 Fahrenheit
-    When I fetch the weather details
-    Then the description should be "warm"
+  Scenario: Set temperature via Helper API and verify updated temperature
+    Given I set temperature via Helper API
+    Then I verify updated temperature
 
-  Scenario: Update condition and verify condition
-    Given the condition is set to 2 (windy)
-    When I fetch the weather details
-    Then the condition should be "windy"
+  Scenario: Set weather condition via Helper API and verify updated condition
+    Given I set weather condition via Helper API
+    Then I verify updated condition
 
+Feature: OpenWeatherMap Website Testing (Bonus Tasks)
+
+  Scenario: Verify main page's search field placeholder text
+    Given I am on the OpenWeatherMap website
+    Then I verify the main page's search field contains correct placeholder text
+
+  Scenario: Search for a city and select it
+    Given I am on the OpenWeatherMap website
+    When I search for "Sydney" and select "Sydney, AU" from the list
+    Then I verify the selected city's title is correct
+
+  Scenario: Verify the date shown is correct
+    Given I am on the OpenWeatherMap website
+    Then I verify that the date shown is correct
+
+  Scenario: Verify the time shown is correct
+    Given I am on the OpenWeatherMap website
+    Then I verify that the time shown is correct

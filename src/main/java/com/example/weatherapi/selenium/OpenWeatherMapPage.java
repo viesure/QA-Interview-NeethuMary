@@ -3,53 +3,52 @@ package com.example.weatherapi.selenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+//import java.time.LocalDate;
+//import java.time.LocalTime;
+//import java.time.format.DateTimeFormatter;
 
 public class OpenWeatherMapPage {
-    private WebDriver driver;
-	private Object expectedTitle;
+    private static WebDriver driver;
 
-    // Constructor
-    public OpenWeatherMapPage(WebDriver driver) {
-        this.driver = driver;
+    static {
+        System.setProperty("webdriver.chrome.driver", "path_to_chromedriver.exe");
+        driver = new ChromeDriver();
     }
 
-    // Method to verify search field placeholder text
-    public boolean verifySearchFieldPlaceholder() {
-        WebElement searchField = driver.findElement(By.id("q"));
-        String placeholderText = searchField.getAttribute("placeholder");
-        return placeholderText.equals("Search");
+    public void navigateToHomePage() {
+        driver.get("https://openweathermap.org/");
     }
- // Method to search for a city and select it
+
+    public String getSearchFieldPlaceholderText() {
+        WebElement searchField = driver.findElement(By.cssSelector("input[placeholder='Search']"));
+        return searchField.getAttribute("placeholder");
+    }
+
     public void searchAndSelectCity(String cityName) {
-        WebElement searchField = driver.findElement(By.id("q"));
+        WebElement searchField = driver.findElement(By.cssSelector("input[placeholder='Search']"));
         searchField.sendKeys(cityName);
-
-        // Wait for the search results to appear
-        // You can add explicit wait logic here
-
-        WebElement cityResult = driver.findElement(By.xpath("//ul[@id='searchList']/li[contains(text(), '" + cityName + "')]"));
-        cityResult.click();
+        // Simulate selection from the list
     }
 
-    // Method to verify selected city's title
-    public boolean verifySelectedCityTitle() {
-        WebElement cityTitle = driver.findElement(By.cssSelector("h2"));
-        return cityTitle.getText().equals(expectedTitle);
+    public String getSelectedCityTitle() {
+        WebElement selectedCity = driver.findElement(By.className("city_header"));
+        return selectedCity.getText();
     }
 
-    // Method to verify date
-    public boolean verifyDate() {
-        // Add verification logic for date
-        return true; // Placeholder return value, replace with actual verification
+    public String getCurrentDate() {
+        WebElement dateElement = driver.findElement(By.xpath("//div[@class='date']"));
+        String dateText = dateElement.getText();
+        return dateText.split(",")[1].trim(); // Extract date from the date element
     }
 
-    // Method to verify time
-    public boolean verifyTime() {
-        // Add verification logic for time
-        return true; // Placeholder return value, replace with actual verification
+    public String getCurrentTime() {
+        WebElement timeElement = driver.findElement(By.xpath("//div[@class='time']"));
+        return timeElement.getText(); // Extract time from the time element
     }
 
-    
-    
+    public void close() {
+        driver.quit();
+    }
 }
-
